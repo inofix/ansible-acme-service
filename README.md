@@ -1,4 +1,4 @@
-[![Travis CI](https://img.shields.io/travis/inofix/ansible-acme-cron-service-apache.svg?style=flat)](http://travis-ci.org/inofix/ansible-acme-cron-service-apache)
+[![Travis CI](https://img.shields.io/travis/inofix/ansible-acme-service-apache.svg?style=flat)](http://travis-ci.org/inofix/ansible-acme-service-apache)
 
 
 Acme Cron Service - Apache
@@ -32,7 +32,7 @@ If radical changes should become necessary, a new role will be created, probably
 Installation
 ------------
 
- # ansible-galaxy install inofix.acme-cron-service-apache
+ # ansible-galaxy install inofix.acme-service-apache
 
 Requirements
 ------------
@@ -62,7 +62,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - inofix.acme-cron-service-apache
+         - inofix.acme-service-apache
 
 License
 -------

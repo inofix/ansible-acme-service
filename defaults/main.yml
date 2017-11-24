@@ -1,5 +1,5 @@
 ---
-# defaults file for acme-setup/
+# defaults file for acme-service-apache/
 default__acme__user: 'acme'
 default__acme__group: 'acme'
 
