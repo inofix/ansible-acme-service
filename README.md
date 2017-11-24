@@ -49,6 +49,7 @@ Role Variables
 * app\_\_acme\_\_user - optional, default='acme'
 * app\_\_acme\_\_group - optional, default='acme'
 * app\_\_acme\_\_config\_dir - optional, default='/etc/ssl/acme'
+* app\_\_acme\_\_service\_dir - optional, default='{{ app\_\_acme\_\_config\_dir }}/service'
 * app\_\_acme\_\_log\_dir - optional, default='/var/log/acme'
 
 Dependencies

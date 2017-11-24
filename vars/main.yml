@@ -1,0 +1,9 @@
+---
+# vars file for acme-setup/
+acme__user: '{{ app__acme__user | d(default__acme__user) }}'
+acme__group: '{{ app__acme__group | d(default__acme__group) }}'
+
+acme__config_dir: '{{ app__acme__config_dir | d(default__acme__config_dir) }}'
+acme__service_dir: '{{ app__acme__service_dir |
+                        d(default__acme__service_dir) }}'
+
