@@ -1,5 +1,5 @@
 ---
-# tasks file for acme-setup/
+# tasks file for acme-service-apache/
 
 - name: 'Create the service restart directory'
   file:

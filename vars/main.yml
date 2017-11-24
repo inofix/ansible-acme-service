@@ -1,5 +1,5 @@
 ---
-# vars file for acme-setup/
+# vars file for acme-service-apache/
 acme__user: '{{ app__acme__user | d(default__acme__user) }}'
 acme__group: '{{ app__acme__group | d(default__acme__group) }}'
 
