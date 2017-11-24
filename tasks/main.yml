@@ -1,0 +1,19 @@
+---
+# tasks file for acme-setup/
+
+- name: 'Create the service restart directory'
+  file:
+    state: directory
+    path: '{{ acme__service_dir }}/'
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+
+- name: 'Install the service reload controller script'
+  template:
+    src: 'restart.sh.j2'
+    dest: '{{ acme__service_dir }}/restart_apache.sh'
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+

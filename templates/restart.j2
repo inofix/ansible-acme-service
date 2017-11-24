@@ -1,0 +1,12 @@
+#!/bin/sh
+
+date -u +'%Y-%m-%d %H:%M:%S Restarting Apache:'
+
+if apache2ctl -t && apache2ctl restart ; then
+    echo "  apache successfully restarted"
+else
+    echo "  failed to restart apache."
+    exit 1
+fi
+
+

@@ -1,0 +1,8 @@
+---
+# defaults file for acme-setup/
+default__acme__user: 'acme'
+default__acme__group: 'acme'
+
+default__acme__config_dir: '/etc/ssl/acme'
+default__acme__service_dir: '{{ default__acme__config_dir }}/service.d'
+
