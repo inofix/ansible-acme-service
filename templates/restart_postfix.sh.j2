@@ -1,0 +1,12 @@
+#!/bin/sh
+
+date -u +'%Y-%m-%d %H:%M:%S Restarting {{ acme__service_name }}:'
+
+if postconf 2>&1 > /dev/null && postfix reload ; then
+    echo "  {{ acme__service_name }} successfully restarted"
+else
+    echo "  failed to restart {{ acme__service_name }}."
+    exit 1
+fi
+
+
