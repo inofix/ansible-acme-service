@@ -1,6 +1,6 @@
 galaxy_info:
   author: Michael Lustenberger
-  description: Restart Apache after certificate renewal
+  description: Restart a service after certificate renewal
   company: INOFIX GmbH
   # issue_tracker_url: http://example.com/issue/tracker
   license: license (GPLv3)
