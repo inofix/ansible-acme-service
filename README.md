@@ -1,12 +1,23 @@
-[![Travis CI](https://img.shields.io/travis/inofix/ansible-acme-service-apache.svg?style=flat)](http://travis-ci.org/inofix/ansible-acme-service-apache)
+[![Travis CI](https://img.shields.io/travis/inofix/ansible-acme-service.svg?style=flat)](http://travis-ci.org/inofix/ansible-acme-service)
 
 
-Acme Cron Service - Apache
-==========================
+Acme Cron Service
+=================
 
 This is an ansible role for reloading services using certificates from let's encrypt, after the certs were renewed.
 For everything related to the creation of the certs see the inofix.acme-\* roles. The main rule which also
 has the details in its README is inofix.ansible-acme-setup.
+
+Currently supported are:
+* HTTP
+ * Apache
+ * NGINX
+* IMAP/POP
+ * Dovecot
+* SMTP
+ * Postfix
+* XMPP
+ * Prosody
 
 This role is meant to be run on any host that needs certificates.
 
@@ -32,7 +43,7 @@ If radical changes should become necessary, a new role will be created, probably
 Installation
 ------------
 
- # ansible-galaxy install inofix.acme-service-apache
+ # ansible-galaxy install inofix.acme-service
 
 Requirements
 ------------
@@ -62,7 +73,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - inofix.acme-service-apache
+         - inofix.acme-service
 
 License
 -------

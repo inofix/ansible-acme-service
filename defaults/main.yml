@@ -1,8 +1,9 @@
 ---
-# defaults file for acme-service-apache/
+# defaults file for acme-service/
 default__acme__user: 'acme'
 default__acme__group: 'acme'
 
 default__acme__config_dir: '/etc/ssl/acme'
 default__acme__service_dir: '{{ default__acme__config_dir }}/service.d'
 
+default__acme__service_name: 'apache'
