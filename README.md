@@ -4,8 +4,10 @@
 Acme Cron Service
 =================
 
-This is an ansible role for reloading services using certificates from let's encrypt, after the certs were renewed.
-For everything related to the creation of the certs see the inofix.acme-\* roles. The main rule which also
+This is an ansible role for reloading services using
+certificates from let's encrypt, after the certs were renewed.
+For everything related to the creation of the certs see
+the inofix.acme-\* roles. The main rule which also
 has the details in its README is inofix.ansible-acme-setup.
 
 Currently supported are:
@@ -19,7 +21,8 @@ Currently supported are:
 * XMPP
  * Prosody
 
-This role is meant to be run on any host that needs certificates.
+This role is meant to be run on any host that needs certificates
+(that runs an SSL service with certs from lets-encrypt).
 
 Why we do not use one of the existing roles?
 
@@ -30,7 +33,7 @@ Why we do not use one of the existing roles?
 State
 -----
 
-UNSTABLE!
+preSTABLE (Feature-Freeze/RC)
 
 
 Promise
@@ -61,6 +64,7 @@ Role Variables
 * app\_\_acme\_\_group - optional, default='acme'
 * app\_\_acme\_\_config\_dir - optional, default='/etc/ssl/acme'
 * app\_\_acme\_\_service\_dir - optional, default='{{ app\_\_acme\_\_config\_dir }}/service'
+* app\_\_acme\_\_service\_name - optional, default='apache'
 * app\_\_acme\_\_log\_dir - optional, default='/var/log/acme'
 
 Dependencies
@@ -74,6 +78,8 @@ Example Playbook
     - hosts: servers
       roles:
          - inofix.acme-service
+
+(See inofix.acme-setup)
 
 License
 -------
