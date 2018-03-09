@@ -1,11 +1,11 @@
 [![Travis CI](https://img.shields.io/travis/inofix/ansible-acme-service.svg?style=flat)](http://travis-ci.org/inofix/ansible-acme-service)
 
 
-Acme Cron Service
-=================
+Acme Service
+============
 
 This is an ansible role for reloading services using
-certificates from let's encrypt, after the certs were renewed.
+certificates from let's encrypt after the certs were renewed.
 For everything related to the creation of the certs see
 the inofix.acme-\* roles. The main rule which also
 has the details in its README is inofix.ansible-acme-setup.
