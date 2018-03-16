@@ -2,7 +2,15 @@
 
 date -u +'%Y-%m-%d %H:%M:%S Restarting {{ acme__service_name }}:'
 
-if prosodyctl restart ; then
+if [ -x "/bin/systemctl" ] ; then
+    the_action="/bin/systemctl restart prosody"
+elif [ -x "/etc/init.d/prosody" ] ; then
+    the_action="/etc/init.d/prosody restart"
+else
+    the_action="prosodyctl restart"
+fi
+
+if $the_action ; then
     echo "  {{ acme__service_name }} successfully restarted"
 else
     echo "  failed to restart {{ acme__service_name }}."
