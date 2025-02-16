@@ -2,7 +2,7 @@
 
 date -u +'%Y-%m-%d %H:%M:%S Restarting Apache:'
 
-if apache2ctl -t && apache2ctl restart ; then
+if apache2ctl -t && apache2ctl graceful ; then
     echo "  {{ acme__service_name }} successfully restarted"
 else
     echo "  failed to restart {{ acme__service_name }}."
